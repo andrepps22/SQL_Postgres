@@ -154,7 +154,7 @@ create table emprestimo(
 	idaluno integer not null,
 	data_emprestimo date not null default current_date,
 	data_devolucao date not null,
-	valor decimal not null,
+	valor float not null default 0,
 	devolvido varchar(1) not null,
 	
 	--PK
