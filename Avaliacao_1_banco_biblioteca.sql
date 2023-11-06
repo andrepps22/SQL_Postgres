@@ -399,10 +399,10 @@ from
 	emprestimo a
 left join 
 	aluno b on a.idaluno = b.idaluno
-where
-	a.valor > 7
 group by
-	b.nome;
+	b.nome
+having 
+	sum(a.valor) > 7;
 
 --CONSULTAS COMANDOS DIVERSOS
 --44. O nome de todos os alunos em ordem decrescente e em letra maiúscula.
